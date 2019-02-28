@@ -13,4 +13,10 @@ public class Janela {
 		this.y1 = y1;
 	}
 	
+	public int calculeArea() {
+		int base = x1 - x0;
+		int altura = y1 - y0;
+		return base * altura;
+	}
+	
 }

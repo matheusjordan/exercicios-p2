@@ -48,9 +48,11 @@ public class Main {
 		System.out.println(Multiplo.getMaiorMultiplo(13, 100));
 		
 		//Questão 12
+		Janela janela = new Janela(1, 6, 4, 8);
+		System.out.println(janela.calculeArea());
 		
 		//Questão 13
 		Circulo circulo = new Circulo(50);
-		System.out.printf(circulo.getDiametro() +"\n%.2f \n%.2f" , circulo.getArea(), circulo.getCircunferencia());
+		System.out.printf(circulo.getDiametro() +" %.2f %.2f" , circulo.getArea(), circulo.getCircunferencia());
 	}
 }
