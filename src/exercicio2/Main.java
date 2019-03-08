@@ -54,5 +54,6 @@ public class Main {
 		//Questão 13
 		Circulo circulo = new Circulo(50);
 		System.out.printf(circulo.getDiametro() +" %.2f %.2f" , circulo.getArea(), circulo.getCircunferencia());
+		read.close();
 	}
 }
