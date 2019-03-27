@@ -11,27 +11,35 @@ public class Main {
 		
 		switch(opc) {
 		case 1:
-			int numero = Numero.getLen(2314321544548L);
-			System.out.println(numero);
+			Numero numero = new Numero(-1);
+			int digitos = numero.getDigitos();
+			System.out.println(digitos);
 			break;
 			
 		case 2:
-			long numero0 = Numero.getFatorial(4);
-			System.out.println(numero0);
+			numero = new Numero(1);
+			int fatorial = numero.getFatorial();
+			System.out.println(fatorial);
 			break;
 			
 		case 3:
-			numero = Numero.getMMC(420, 360);
-			System.out.println(numero);
-			break;
-		
+
 		case 4:
 		
 		case 5:
-		
+			PotenciaNumerica potObj = new PotenciaNumerica(6, 16);
+			long potencia = potObj.getPotencia();
+			System.out.println(potencia);
+			break;
+			
 		case 6:
 			
+			
 		case 7:
+			Somatorio somatorio = new Somatorio(50, 58);
+			int soma = somatorio.getSomatorio();
+			System.out.println(soma);
+			break;
 			
 		case 8:
 			
@@ -39,37 +47,13 @@ public class Main {
 			Sintetizador st = new Sintetizador();
 			String texto = st.getText(11);
 			System.out.println(texto);
+			break;
+			
 		case 10:
 			Calendario cl = new Calendario();
-			
 			cl.generateTable(4, 2019);
+			break;
 			
-//			for(int i=1 ; i<=30; i++) {
-//				int dia = cl.diaDaSemana(9, 2015, i);
-//				switch(dia) {
-//				case 1:
-//					System.out.println(dia +" segunda");
-//					break;
-//				case 2:
-//					System.out.println(dia +" terça");
-//					break;
-//				case 3:
-//					System.out.println(dia +" quarta");
-//					break;
-//				case 4:
-//					System.out.println(dia +" quinta");
-//					break;
-//				case 5:
-//					System.out.println(dia +" sexta");
-//					break;
-//				case 6:
-//					System.out.println(dia +" sabado");
-//					break;
-//				case 7:
-//					System.out.println(dia +" domingo");
-//					break;
-//				}
-//			}
 		}
 	}
 	

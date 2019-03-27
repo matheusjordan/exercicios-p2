@@ -1,50 +1,33 @@
 package exercicio4;
 
 public class Numero {
+	private int valor;
 	
-	
-	public static int getLen(long num) {
-		String numS = "" + num;
-		return numS.length();
+	public Numero(int numero) {
+		this.valor = numero;
 	}
 	
-	public static Long getFatorial(int num) {
-		long res = 0;
+	// Sabe-se o tamanho de um numero contando quantas vezes o mesmo é divisivel por 10
+	// QUando o resto da divisão desse numero for 0, então contamos quantas vezes ele foi divido
+	// Até chegar no resto 0. E caso o numero seja 0, retorne 1
+	public int getDigitos() {
+		if (valor == 0) return 1;
 		
-		if(num == 0 || num == 1) {
-			return 1L;
+		int cont = 0;
+		while(valor % 10 != 0) {
+			cont += 1;
+			valor = valor / 10;
 		}
-		
-		
-		for(int i = (num -1); i > 0; i--) {
-			res += num * i;
-			System.out.println(i);
-		}
-		
-		return res;
+		return cont;
 	}
 	
-	public static int getMMC(int num1, int num2) {
-		int i = 2;
-		int mmc = 1;
+	public int getFatorial() {
+		if (valor == 0 || valor == 1) return 1;
 		
-		do {
-			boolean eh1 = num1 % i == 0;
-			boolean eh2 = num2 % i == 0;
-			
-			if(eh1) {
-				mmc *= i;
-				num1 = num1 / i;
-			}
-			
-			if(eh2) {
-				mmc *= i;
-				num2 = num2 / i;
-			}
-			
-			i++;
-		} while(num1 != 1 && num2 != 1);
-		
-		return mmc;
+		int fatorial = 0;
+		for (int i = (valor -1); i > 0; i--) {
+			fatorial += i * valor;
+		}
+		return fatorial;
 	}
 }
