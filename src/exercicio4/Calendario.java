@@ -7,7 +7,7 @@ public class Calendario {
 	private String[] week = {"D", "S", "T", "Q", "Q", "S", "S" };
 	
 	public void generateTable(int mes, int ano) {
-		String columns = " ";
+		String columns = "  ";
 		String table = "";
 		int limite = this.totalDias(mes, ano);
 		int loops = 1;
@@ -26,10 +26,13 @@ public class Calendario {
 			for (int j = 0; j < 7; j++) {
 				String day;
 				
+				//Condicionais para verificar o valor do dia
 				if(loops < inicio) {
 					day = " ";
+				} else if(loops == inicio){
 					loops = 1;
-					break;
+					inicio = 0;
+					day = "" + loops;
 				} else {
 					day = "" + loops;
 				}
@@ -40,7 +43,7 @@ public class Calendario {
 				//Condicional para formatar digitos de 1 casa decimal
 				if(day.length() == 1) {
 					if(j < 7) {
-						days += day + "  ";
+						days += " "+ day + " ";
 					} else {
 						days += day;
 					}
@@ -54,6 +57,7 @@ public class Calendario {
 						days += day;
 					}
 				}
+				
 				loops++;
 			}
 			
@@ -75,9 +79,10 @@ public class Calendario {
 		Calendar cl = generateMonthCalendar(mes, ano);
 		setCalendarDay(cl, dia);
 		int diaDaSemana = getDayOfWeek(cl);
-		return (diaDaSemana) +1;
+		return (diaDaSemana);
 	}
 	
+	//Cria um objeto calendario com os dados que passar
 	private Calendar generateMonthCalendar(int mes, int ano) {
 		Calendar cl = new GregorianCalendar();
 		cl.set(Calendar.MONTH, mes -1);
@@ -96,7 +101,7 @@ public class Calendario {
 		cl.set(Calendar.DAY_OF_MONTH, day);
 	}
 		
-	//Retorna o dia da semana de um determinado dia, ex: dia 10 retorna 2=Segunda
+	//Retorna o dia da semana de um determinado dia, ex: dia 10 retorna 1=Segunda
 	private int getDayOfWeek(Calendar cl) {
 		return cl.get(Calendar.DAY_OF_WEEK);
 	}

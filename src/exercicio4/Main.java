@@ -42,34 +42,34 @@ public class Main {
 		case 10:
 			Calendario cl = new Calendario();
 			
-			cl.generateTable(9, 2015);
+			cl.generateTable(4, 2019);
 			
-			for(int i=1 ; i<=30; i++) {
-				int dia = cl.diaDaSemana(9, 2015, i);
-				switch(dia) {
-				case 2:
-					System.out.println(dia +" segunda");
-					break;
-				case 3:
-					System.out.println(dia +" terça");
-					break;
-				case 4:
-					System.out.println(dia +" quarta");
-					break;
-				case 5:
-					System.out.println(dia +" quinta");
-					break;
-				case 6:
-					System.out.println(dia +" sexta");
-					break;
-				case 7:
-					System.out.println(dia +" sabado");
-					break;
-				default:
-					System.out.println(dia +" domingo");
-					break;
-				}
-			}
+//			for(int i=1 ; i<=30; i++) {
+//				int dia = cl.diaDaSemana(9, 2015, i);
+//				switch(dia) {
+//				case 1:
+//					System.out.println(dia +" segunda");
+//					break;
+//				case 2:
+//					System.out.println(dia +" terça");
+//					break;
+//				case 3:
+//					System.out.println(dia +" quarta");
+//					break;
+//				case 4:
+//					System.out.println(dia +" quinta");
+//					break;
+//				case 5:
+//					System.out.println(dia +" sexta");
+//					break;
+//				case 6:
+//					System.out.println(dia +" sabado");
+//					break;
+//				case 7:
+//					System.out.println(dia +" domingo");
+//					break;
+//				}
+//			}
 		}
 	}
 	
