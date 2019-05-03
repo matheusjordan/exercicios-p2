@@ -6,7 +6,7 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner read = new Scanner(System.in);
 		
-		System.out.printf("Escolha uma opção (1 a 10): ");
+		System.out.printf("Escolha uma opï¿½ï¿½o (1 a 10): ");
 		int opc = read.nextInt();
 		
 		switch(opc) {
@@ -55,6 +55,7 @@ public class Main {
 			break;
 			
 		}
+		read.close();
 	}
 	
 }
