@@ -1,6 +1,5 @@
-package exercicio6;
+﻿package exercicio6;
 
-import java.util.Scanner;
 
 import org.input4j.Input;
 
