@@ -1,5 +1,7 @@
 package exercicio6;
 
+import java.util.Scanner;
+
 import org.input4j.Input;
 
 public class Main {
@@ -112,6 +114,9 @@ public class Main {
 				break;
 				
 			case 8:
+				int potenciaCV = Input.Int("Digite a potência em Cavalo Vapor(VP): ");
+				System.out.println(ConversorDePotencia.getConversaoParaHP(potenciaCV));
+				System.out.println(ConversorDePotencia.getConversaoParaKW(potenciaCV));
 				
 				break;
 			case 9:
